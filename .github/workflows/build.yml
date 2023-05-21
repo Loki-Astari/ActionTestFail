@@ -5,13 +5,13 @@ jobs:
       env:
         MSYS: "winsymlinks:nativestrict"
     steps:
-    - name: Install build dependencies (Windows)
-      uses: msys2/setup-msys2@v2
-      with:
-        update:  false
-        msystem: mingw64
-      install:
-        make
-    - name: Run Build
-        make
+      - name: Install build dependencies (Windows)
+        uses: msys2/setup-msys2@v2
+        with:
+          update:  false
+          msystem: mingw64
+        install:
+          make
+      - name: Run Build
+          make
 
