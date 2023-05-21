@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: msys2/setup-msys2@v2
       with:
-        update: false,
-        msystem: MINGW64,
+        update: false
+        msystem: MINGW64
         install: >-
           make
     - name: Build
