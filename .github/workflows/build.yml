@@ -4,8 +4,8 @@ on:         [push]
 
 jobs:
   build:
-    name:    "Windows 64-bit",
-    rund-on: windows-latest,
+    name:    "Windows 64-bit"
+    rund-on: windows-latest
     defaults:
       run:
         shellold: 'msys2 {0}',
