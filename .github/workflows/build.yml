@@ -5,7 +5,7 @@ on:         [push]
 jobs:
   build:
     name:    "Windows 64-bit"
-    rund-on: windows-latest
+    run-on:  windows-latest
     defaults:
       run:
         shell:    'bash'
