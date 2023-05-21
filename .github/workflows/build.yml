@@ -4,8 +4,8 @@ on:         [push]
 
 jobs:
   build:
-    name:    "Windows 64-bit"
-    rund-on: windows-latest
+    name:    "Windows 64-bit",
+    rund-on: windows-latest,
     defaults:
       run:
         shellold: 'msys2 {0}',
@@ -16,8 +16,8 @@ jobs:
     steps:
     - uses: msys2/setup-msys2@v2
       with:
-        update: false
-        msystem: mingw64
+        update: false,
+        msystem: mingw64,
         install: >-
           make
     - name: Build
