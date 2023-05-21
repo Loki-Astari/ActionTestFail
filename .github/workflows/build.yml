@@ -1,21 +1,26 @@
-name:   Minimal Build Failure
-on:     [push]
+name:       GitHub-CI for ci-test
+run-name:   Action Minimal Fail Example
+on:         [push]
+
 jobs:
-    build:
-      env:
-        MSYS: "winsymlinks:nativestrict"
+  build:
+    name:    "Windows 64-bit"
+    rund-on: windows-latest
     defaults:
       run:
+        shellold: 'msys2 {0}',
+        shell:    'bash',
+    env:
+      MSYS: "winsymlinks:nativestrict"
+
     steps:
-      - name: Install build dependencies (Windows)
-        uses: msys2/setup-msys2@v2
-        with:
-          update:  false
-          msystem: mingw64
+    - uses: msys2/setup-msys2@v2
+      with:
+        update: false
+        msystem: mingw64
         install: >-
           make
-      - name: Run Build
-        shell: bash
-        run: |
-          make
+    - name: Build
+      run: |
+        make
 
