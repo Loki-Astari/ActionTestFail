@@ -8,8 +8,7 @@ jobs:
     rund-on: windows-latest
     defaults:
       run:
-        shellold: 'msys2 {0}',
-        shell:    'bash',
+        shell:    'bash'
     env:
       MSYS: "winsymlinks:nativestrict"
 
