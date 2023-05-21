@@ -19,6 +19,7 @@ jobs:
         msystem: MINGW64
         install: >-
           make
+    - uses: actions/checkout@master
     - name: Build
       run: |
         make
