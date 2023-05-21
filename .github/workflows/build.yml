@@ -4,14 +4,18 @@ jobs:
     build:
       env:
         MSYS: "winsymlinks:nativestrict"
+    defaults:
+      run:
     steps:
       - name: Install build dependencies (Windows)
         uses: msys2/setup-msys2@v2
         with:
           update:  false
           msystem: mingw64
-        install:
+        install: >-
           make
       - name: Run Build
+        shell: bash
+        run: |
           make
 
