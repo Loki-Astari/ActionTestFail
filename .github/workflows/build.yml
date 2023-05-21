@@ -5,7 +5,7 @@ on:         [push]
 jobs:
   build:
     name:    "Windows 64-bit"
-    run-on:  windows-latest
+    runs-on: windows-latest
     defaults:
       run:
         shell:    'bash'
